@@ -1,0 +1,26 @@
+<h2>Task input</h2>
+<div>
+    <div>
+        <label>title</label>
+        <input [(ngModel)]="task.title">
+    </div>
+     <div>
+        <label>version</label>
+        <input [(ngModel)]="task.version">
+    </div>
+    <div>
+        <label>done</label>
+        <input [(ngModel)]="task.done">
+    </div>
+    <div>
+        <label>author</label>
+        <input [(ngModel)]="task.author">
+    </div>
+     <div>
+        <label>deadline</label>
+        <input [(ngModel)]="task.deadline">
+    </div>
+    <div>
+        <button (click)="add()">{{buttonName}}</button>
+    </div>
+</div>

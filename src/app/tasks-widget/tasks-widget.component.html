@@ -1,0 +1,8 @@
+<h3>Tasks widget</h3>
+<task-input
+    (addTask)="addTask($event)"
+    #taskInput
+>
+</task-input>
+
+<task-list (edit)="onEdit($event)"></task-list>

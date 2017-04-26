@@ -1,0 +1,29 @@
+<h2>Task list</h2>
+
+<table>
+    <thead style="background: silver;">
+        <tr>
+            <td>Title</td>
+            <td>Done</td>
+            <td>Author</td>
+            <td>Deadline</td>
+            <td>Version</td>
+            <td>Change status</td>
+            <td>Remove</td>
+            <td>Edit</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td>{{task.title}}</td>
+            <td>{{task.done}}</td>
+            <td>{{task.author}}</td>
+            <td>{{task.deadline}}</td>
+            <td>{{task.version}}</td>
+            <td><input type="checkbox" [ngModel]="task.done" (click)="changeStatus(task)"></td>
+            <td><button (click)="remove(task)">Remove</button></td>
+            <td><button (click)="onEdit(task)">Edit</button></td>
+        </tr>     
+    </tbody>
+</table>
+
